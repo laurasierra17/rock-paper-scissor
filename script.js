@@ -14,3 +14,15 @@ if(num === 0) {
     compChoice = "S";
 }
 console.log(compChoice);
+
+// Variables to keep track of the user's wins, lossess, and ties
+var wins = 0, losses = 0, ties = 0;
+
+// Updates user's points
+if (userInput === "R" && compChoice === "S" || userInput === "S" && compChoice === "P" || userInput === "P" && compChoice === "R") {
+    wins++;
+} else if (compChoice === "R" && userInput === "S" || compChoice === "S" && userInput === "P" || compChoice === "P" && userInput === "R") {
+    losses++;
+} else {
+    ties++;
+}
