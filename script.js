@@ -1,5 +1,3 @@
-
-
 // Variables to keep track of the user's wins, lossess, and ties
 var wins = 0, losses = 0, ties = 0;
 
@@ -9,11 +7,17 @@ while(playAgain) {
     // Ask user to select between R, P, or S
     var userInput = prompt("Enter R, P, or S to play");
 
+    // If user clicks 'Cancel' on the first prompt
+    if (userInput === null) {
+        alert("Hope you play next time");
+        playAgain = false;
+        break;
+    }
     // If user types a different letter, prompt the game again
     if (userInput !== "R" && userInput !== "S" && userInput !== "P" && userInput !== "") {
         userInput = prompt("Please enter a valid letter. \nEnter R, P, or S to play");
     }
-
+    
     // generates random number for computer choice
     var num = Math.floor(Math.random() * 3);
     var compChoice;
