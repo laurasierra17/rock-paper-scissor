@@ -17,7 +17,8 @@ console.log(compChoice);
 
 // Variables to keep track of the user's wins, lossess, and ties
 var wins = 0, losses = 0, ties = 0;
-
+// Alerts user about wins, losses, ties
+alert("Wins: " + wins + " Losses: " + losses + " Ties: " + ties);
 // Updates user's points
 if (userInput === "R" && compChoice === "S" || userInput === "S" && compChoice === "P" || userInput === "P" && compChoice === "R") {
     wins++;
